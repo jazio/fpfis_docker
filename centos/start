@@ -1,0 +1,10 @@
+DOCKER_USER=jazio
+DOCKER_IMAGE=fpfis_lamp
+PATH_TO_MOUNT=/var/www/html
+
+
+# to build
+docker build --rm=true -t ${DOCKER_USER}/${DOCKER_IMAGE} . < Dockerfile
+
+# to run
+docker run -d -p 8080:80 -v ${PATH_TO_MOUNT}:/var/www:ro ${DOCKER_USER}/${DOCKER_IMAGE}

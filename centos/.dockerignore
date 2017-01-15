@@ -1,0 +1,10 @@
+www
+vendor
+bin
+build
+.svn
+.git
+translations
+modules
+themes
+lib
